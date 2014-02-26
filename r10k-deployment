@@ -1,0 +1,21 @@
+#!/usr/bin/ruby
+
+require 'webrick'
+require 'json'
+
+req = WEBrick::HTTPRequest.new(WEBrick::Config::HTTP)
+req.parse(STDIN)
+
+json_payload = JSON.parse(req.query['payload'])
+branch = json_payload['ref'].split('/')[-1]
+
+pid = fork
+if pid.nil? then
+  STDIN.reopen "/dev/null"
+  STDOUT.reopen "/dev/null", "a"
+  STDERR.reopen "/dev/null", "a"
+
+  exec('/usr/local/bin/r10k', 'deploy', 'environment', branch, '-p')
+end
+
+Process.detach(pid)

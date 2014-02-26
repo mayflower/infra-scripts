@@ -1,0 +1,15 @@
+Source: infra-scripts
+Section: admin
+Priority: optional
+Maintainer: Mayflower Administrators <admin-intern@mayflower.de>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: https://github.com/Mayflower/infra-scripts
+Vcs-Git: git://github.com/Mayflower/infra-scripts.git
+Vcs-Browser: https://github.com/Mayflower/infra-scripts
+
+Package: infra-r10k-deployment
+Architecture: all
+Depends: ruby, r10k
+Description: Deploys git branches as puppet envs with r10k
+
