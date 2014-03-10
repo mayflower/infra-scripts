@@ -1,3 +1,9 @@
+infra-scripts (0.1-1.1) precise; urgency=low
+
+  * Add conflubak.py. A script to trigger confluence XML export via xmlrpc
+
+ -- Tristan Helmich <tristan.helmich@mayflower.de>  Mon, 10 Mar 2014 12:06:19 +0100
+
 infra-scripts (0.1-1) unstable; urgency=low
 
   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
