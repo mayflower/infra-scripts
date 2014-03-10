@@ -13,3 +13,8 @@ Architecture: all
 Depends: ruby, r10k
 Description: Deploys git branches as puppet envs with r10k
 
+Package: conflubak
+Architecture: all
+Depends: python3
+Description: Triggers Confluence XML export (saved locally on server)
+
